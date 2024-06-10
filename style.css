@@ -1,0 +1,75 @@
+.btn-container {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: flex-start;
+}
+.filter-btn {
+    margin-left: 2%;
+    width: 100px;
+    border-radius: 2%;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: 1px 1px 6px black;
+}
+.filter-btn:hover {
+    background-color: green;
+}
+
+.section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 2%;
+    width: 80%;
+    margin: 0 auto;
+}
+.photo {
+    width: 300px;
+    height: 200px;
+}
+
+.car-item {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+.item-info {
+    margin-left: 3%;
+}
+.show {
+    animation: show .5s ease 0s 1 forwards;
+    transform-origin: center;
+}
+.hide {
+    animation: hide .5s ease 0s 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        width: 0;
+        margin: 0;
+        height: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0);
+        width: 0;
+        margin: 0;
+        height: 0;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-container button .active {
+    border-color: red;
+    color: red;
+}
